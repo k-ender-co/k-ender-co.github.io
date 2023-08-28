@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const title = document.querySelector('#titler');
   const subtitle = document.querySelector('#sutT');
   const I = document.querySelector('#I');
-  const A = document.querySelector('#A');
-  const C = document.querySelector('#C');
+  const A = document.querySelector('#P');
+  const C = document.querySelector('#S');
   const Acer = document.querySelector('#AT');
+  const D = document.querySelector("#D");
   const text = 'Launcher Trinity';
 
   const typeWriter = (element, text, i) => {
@@ -67,8 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   typeWriter(I,"Inicio",0);
-  typeWriter(A,"Acerca de",0);
-  typeWriter(C,"Contacto",0);
+  typeWriter(A,"proyectos",0);
+  typeWriter(C,"soporte",0);
+  typeWriter(D,"Discord",0);
   typeWriter(title, text, 0);
   setTimeout(() => {
     const subtitleText = 'El launcher mas seguro';
