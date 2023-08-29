@@ -213,3 +213,37 @@ header {
   background-color:  #4c5c64 ;
   transform: translateY(-10px);
 }
+
+
+
+.LA {
+  display: inline-block;
+  margin: 0px;
+  background-color:  #8eda1f ;
+  width: 210px;
+  height: 290px;
+  margin-left: 48px;
+  margin-top: 15px;
+
+}
+.LAIM {
+  margin: 0px;
+  width: 180px;
+}
+.LAT {
+  margin: 0;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.LA .LAC {
+  margin-left: 15px;
+}
+.LA a {
+  color: black;
+  text-decoration: none;
+}
+.LA:hover {
+  background-color:  #a1f526 ;
+  transform: translateY(-10px);
+}
