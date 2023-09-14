@@ -3,6 +3,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0; 
+
 }
 body {
   margin: 0;
@@ -48,6 +49,7 @@ nav a {
     text-align: center;
     width: 100%;
     margin: 0;
+    background-color: black;
 }
 
 .texto-encima{
@@ -63,7 +65,7 @@ nav a {
 }
 .imgf {
   display: inline-block;
-  width: 100%;
+  width: 90%;
   margin: 0;
   padding: 0;
 }
@@ -246,4 +248,7 @@ header {
 .LA:hover {
   background-color:  #a1f526 ;
   transform: translateY(-10px);
+}
+.logo:hover {
+  color: #0000;
 }

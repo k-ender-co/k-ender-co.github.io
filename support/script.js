@@ -3,10 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtitle = document.querySelector('#sutT');
     const I = document.querySelector('#I');
     const A = document.querySelector('#P');
-    const C = document.querySelector('#S');
-    const Acer = document.querySelector('#AT');
     const D = document.querySelector("#D");
-    const text = 'KenderDev\n proyects';
   
     const typeWriter = (element, text, i) => {
       if (i < text.length) {
@@ -68,8 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     
     typeWriter(I,"Inicio",0);
-    typeWriter(A,"Kits de inicio",0);
-    typeWriter(C,"soporte",0);
+    typeWriter(A,"proyectos",0);
     typeWriter(D,"Discord",0);
     typeWriter(title, text, 0);
     setTimeout(() => {
@@ -78,19 +74,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }, text.length * 100 + 1000);
     
   });
-  
-  document.getElementById('inst').addEventListener('click', function() {
-    // URL del archivo que deseas descargar
-    const url = 'https://bitbucket.org/ltbase/files/downloads/LauncherTrinity.exe';
-  
-    // Crear un enlace temporal
-    const enlaceTemporal = document.createElement('a');
-    enlaceTemporal.href = url;
-  
-    // Agregar el enlace temporal al documento y activarlo para iniciar la descarga
-    document.body.appendChild(enlaceTemporal);
-    enlaceTemporal.click();
-  
-    // Remover el enlace temporal del documento después de iniciada la descarga
-    document.body.removeChild(enlaceTemporal);
+const boton = document.getElementById('send');
+
+// Agrega un evento de clic al botón
+boton.addEventListener('click', function() {
+  const nodemailer = require('nodemailer');
+
+  // Configurar el transporte SMTP
+  const transporter = nodemailer.createTransport({
+      service: 'Gmail', // Puedes utilizar otros servicios de correo también
+      auth: {
+          user: 'kristianzvedakris@gmail.com', // Cambia esto a tu dirección de correo electrónico
+          pass: '696606442.696606442kri' // Cambia esto a tu contraseña
+      }
   });
+
+  // Configurar los datos del correo electrónico
+  const mailOptions = {
+      from: 'kristianzvedakris@gmail.com',
+      to: 'kendercorp1248@gmail.com', // Cambia esto al correo del destinatario
+      subject: 'Asunto del correo',
+      text: 'Este es el contenido del correo electrónico.'
+  };
+
+  // Enviar el correo electrónico
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          console.error('Error al enviar el correo:', error);
+      } else {
+          console.log('Correo electrónico enviado:', info.response);
+      }
+  });
+});
