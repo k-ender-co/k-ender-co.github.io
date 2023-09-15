@@ -165,7 +165,7 @@ header {
 
 @media (max-width: 768px) {
   .proyects {
-    margin-left: 38px;
+    margin-left: 50%;
   }
   .navbar {
       align-items: flex-start;
