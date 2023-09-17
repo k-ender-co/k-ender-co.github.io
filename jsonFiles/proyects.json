@@ -14,8 +14,8 @@
         },
         "Wiki":{
             "Title":"WIKI",
-            "Description":"WIKI for prog",
-            "a":"https://github.com/kenderDev/Minecraft-Launcher-Core-Ultimate_MCLCU/tree/main",
+            "Description":"WIKI for programers",
+            "a":"/wiki/",
             "color":"#35434a"
         }
        

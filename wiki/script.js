@@ -119,11 +119,15 @@ function nombreDeLaFuncion(contenido) {
               const titlee = namee.Title;
               if(titlee != null){
                 const Markdown = namee.Markdown;
+
+                
+                newPage(titlee,Markdown + ".md");
                 console.log("Title:", titlee);
                 console.log("key:", keyy);
-                console.log("markdown", Markdown);
+                console.log("markdownFile", Markdown);
                 console.log("------------------------");
-                newPage(titlee,Markdown);
+                
+                
               }
               
             }
@@ -134,7 +138,6 @@ function nombreDeLaFuncion(contenido) {
 function NewGroup(Title){
   const titlee = document.createElement("h5");
   titlee.textContent = ">>>>" + Title + "<<<<";
-  titlee.style.marginLeft = "42%";
   return titlee;
 }
 function newPage(Title, markdown){
@@ -144,8 +147,53 @@ function newPage(Title, markdown){
     const contenedor = document.getElementById("WikiIndex"); // Reemplaza "miContenedor" con el ID de tu contenedor
 
     contenedor.appendChild(titlee);
-
+    console.log("qwerqwerqwerqwe",markdown);
     titlee.addEventListener("click", function() {
-        document.getElementById('Markdown').innerHTML = marked.parse(markdown);
+        fetch(markdown)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('No se pudo cargar el archivo.');
+          }
+          return response.text(); // O .json() si es un archivo JSON
+        })
+        .then(data => {
+          // Trabaja con el contenido del archivo aquí
+          console.log(data);
+          document.getElementById('Markdown').innerHTML = marked.parse(data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+        
       });
+    titlee.addEventListener("mouseleave", function() {
+      this.style.color = "white"; // Establecer el color de fondo original
+      this.style.transform = "none"; // Eliminar la transformación translateY
+    });
+    // Agregar estilos para el hover directamente en JavaScript
+    titlee.addEventListener("mouseenter", function() {
+      this.style.color = "#b2b2b2";
+    });
+  
+    
+}
+
+
+
+function readFile(Path){
+  fetch(Path)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('No se pudo cargar el archivo.');
+    }
+    return response.text(); // O .json() si es un archivo JSON
+  })
+  .then(data => {
+    // Trabaja con el contenido del archivo aquí
+    console.log(data);
+    return data;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 }

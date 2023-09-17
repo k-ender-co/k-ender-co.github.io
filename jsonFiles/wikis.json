@@ -1,79 +1,42 @@
 {
         "group":{
-                "g1":{
-                        "Title":"g1",
-                        "pg1":{
-                                "Title":"pg1",
-                                "Markdown":"## this is the page 11 <pre>print()</pre> --"
+                "Fundamentos":{
+                        "Title":"Fundamentos",
+                        "QueSon":{
+                                "Title":"Que Son?",
+                                "Markdown":"wikis/Fundamentos/QueSon/Makedown"
                         },
-                        "pg2":{
-                                "Title":"pg1",
-                                "Markdown":"## this is the page 12"
+                        "Variables":{
+                                "Title":"Variables",
+                                "Markdown":"wikis/Fundamentos/Variables/Makedown"
                         },
-                        "pg3":{
-                                "Title":"pg1",
-                                "Markdown":"## this is the page 13"
-                        }
-
-                },
-                "g2":{
-                        "Title":"g2",
-                        "pg1":{
-                                "Title":"pg2",
-                                "Markdown":"## this is the page 21"
+                        "TiposDeDatos":{
+                                "Title":"Tipos De Datos",
+                                "Markdown":"wikis/Fundamentos/TiposDeDatos/Makedown"
                         },
-                        "pg2":{
-                                "Title":"pg2",
-                                "Markdown":"## this is the page 22"
+                        "Operadores":{
+                                "Title":"Operadores",
+                                "Markdown":"wikis/Fundamentos/Operadores/Makedown"
                         },
-                        "pg3":{
-                                "Title":"pg2",
-                                "Markdown":"## this is the page 23"
-                        }
-                },
-                "g3":{
-                        "Title":"g3",
-                        "pg1":{
-                                "Title":"pg3",
-                                "Markdown":"## this is the page 31"
+                        "condicionales":{
+                                "Title":"Condicionales",
+                                "Markdown":"wikis/Fundamentos/Condicionales/Makedown"
+                                
                         },
-                        "pg2":{
-                                "Title":"pg3",
-                                "Markdown":"## this is the page 32"
+                        "commentarios":{
+                                "Title":"commentarios",
+                                "Markdown":"wikis/Fundamentos/comentarios/Makedown"
+                                
                         },
-                        "pg3":{
-                                "Title":"pg3",
-                                "Markdown":"## this is the page 33"
-                        }
-                },
-                "g4":{
-                        "Title":"g4",
-                        "pg1":{
-                                "Title":"pg4",
-                                "Markdown":"## this is the page 41"
+                        "Librerias":{
+                                "Title":"Librerias",
+                                "Markdown":"wikis/Fundamentos/librerias/Makedown"
+                                
                         },
-                        "pg2":{
-                                "Title":"pg4",
-                                "Markdown":"## this is the page 42"
-                        },
-                        "pg3":{
-                                "Title":"pg4",
-                                "Markdown":"## this is the page 43"
-                        }
-                },
-                "g42":{
-                        "Title":"g4f",
-                        "pg1":{
-                                "Title":"pg4",
-                                "Markdown":"## this is the page 41 "
-                        },
-                        "pg2":{
-                                "Title":"pg4",
-                                "Markdown":"## this is the page 42"
-                        },
-                        "pg3":{
-                                "Title":"pg4",
-                                "Markdown":"## this is the page 43"
+                        "Funciones":{
+                                "Title":"Funciones",
+                                "Markdown":"wikis/Fundamentos/Funciones/Makedown"
+                                
                         }
                 }
 

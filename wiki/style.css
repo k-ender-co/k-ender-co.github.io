@@ -73,35 +73,22 @@ html, body {
     transition: color 0.3s;
   }
 
-  #WikiIndex {
-    background-color: rgb(66, 66, 66); /* Establece la posición fija */
-    top: 0; /* Coloca el div en la parte superior de la pantalla */
-    right: 0; /* Lo coloca en el lado derecho de la pantalla */
-    margin-right: 0px; /* Añade un margen derecho opcional para separarlo del borde de la pantalla */
-    width: 10%;
-    height: auto;
-    margin-top: 0px;
-    color: white;
-    margin-left: 90%;
-    display: block;
-    padding: 0px;
-  }
-
   #Markdown {
-    color: white;
-    background-color: rgb(66, 66, 66);
-    margin-top: 41px;
-    margin-left: 0px;
-    width: 74%;
-    height: 100%;
-    padding: 0px;
-  }
-  #Markdown * {
-    margin-top: 10px;
     display: inline-block;
-    padding: 0px;
-    width: 74%;
+    margin-left: 15px;
+    vertical-align: top; /* Alinea el elemento en la parte superior */
+    margin-top: 41px;
+    color: rgb(205, 200, 200);
   }
+  
+  #WikiIndex {
+    display: inline-block;
+    width: 150px;
+    background-color: #1c1a1a;
+    color: white;
+    margin-top: 41px;
+  }
+  
 
   .nav-list a:hover {
     color: #ffd700;
