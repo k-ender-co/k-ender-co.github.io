@@ -7,6 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const Acer = document.querySelector('#AT');
     const D = document.querySelector("#D");
     const text = 'KenderDev\n proyects';
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'jsonFiles/proyects.json', true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var contenido = xhr.responseText;
+      console.log(contenido);
+      nombreDeLaFuncion(contenido);
+          
+  }
+      
+};
+xhr.send();
   
     const typeWriter = (element, text, i) => {
       if (i < text.length) {
@@ -94,3 +107,109 @@ document.addEventListener('DOMContentLoaded', () => {
     // Remover el enlace temporal del documento después de iniciada la descarga
     document.body.removeChild(enlaceTemporal);
   });
+
+
+
+function nombreDeLaFuncion(contenido) {
+    // Código que hace algo con los parámetros
+    // Puedes realizar cualquier acción aquí
+    const baseObjeto = JSON.parse(contenido);
+
+    const grops = baseObjeto.Proyects;
+
+    for (const key in grops) {
+      if (grops.hasOwnProperty(key)) {
+        const name = grops[key];
+        const title = name.Title;
+        const Description = name.Description;
+        const a = name.a;
+        const color = name.color;
+        console.log("Title:", title);
+        console.log("key:", key);
+        console.log("description: ", Description);
+        console.log("a", a);
+        console.log("color", color);
+        const imagePath = "scr/" + key + "/img.png"
+        console.log("ImagePath", imagePath);
+        console.log("------------------------");
+        NewProyect(title, Description, a , imagePath, color);
+      }
+    }
+  }
+function NewProyect(name, description, a, imagePath, color){
+  // Obtener una referencia al elemento contenedor en el que deseas agregar el grupo
+  const contenedor = document.getElementById("proyects"); // Reemplaza "miContenedor" con el ID de tu contenedor
+
+  // Crear un div con la clase "LA"
+  const divLA = document.createElement("div");
+
+  divLA.style.color = "black";
+  divLA.style.textDecoration = "none";
+  divLA.style.marginLeft = "10px"; // Ajusta el margen a 10 píxeles
+  divLA.style.backgroundColor = color; // Cambia el color de fondo a lightblue
+  divLA.style.display = "inline-block";
+  divLA.style.margin = "0px";
+  divLA.style.width = "210px";
+  divLA.style.height = "290px";
+  divLA.style.marginLeft = "10px";
+  divLA.style.marginBottom = "0px";
+  divLA.style.paddingBottom = "0px";
+
+
+
+
+
+  // Crear un enlace <a> dentro del div
+  const enlace = document.createElement("a");
+  enlace.href = a;
+  enlace.style.color = "back";
+  enlace.style.textDecoration = "none";
+
+
+  // Crear un div con la clase "LAC" dentro del enlace
+  const divLAC = document.createElement("div");
+  divLAC.style.marginLeft = "15px";
+
+  // Crear un encabezado <h3> con la clase "LAT" dentro del divLAC
+  const h3LAT = document.createElement("h3");
+  h3LAT.textContent = name;
+  h3LAT.style.margin = "0px";
+  h3LAT.style.paddingLeft = "20px";
+  h3LAT.style.marginLeft = "30px";
+  h3LAT.style.textDecoration = "none";
+  h3LAT.style.color = "black";
+
+  // Crear un elemento de imagen <img> con la clase "LAIM" dentro del divLAC
+  const imgLAIM = document.createElement("img");
+  imgLAIM.src = imagePath;
+  imgLAIM.style.margin = "0px";
+  imgLAIM.style.width = "180px";
+  imgLAIM.style.height = "180px";
+
+  // Crear un párrafo <p> dentro del divLAC
+  const parrafo = document.createElement("p");
+  parrafo.textContent = description;
+  parrafo.style.textDecoration = "none";
+  parrafo.style.color = "black";
+
+  // Agregar los elementos al DOM en la estructura deseada
+  divLAC.appendChild(h3LAT);
+  divLAC.appendChild(document.createElement("div")); // Div vacío
+  divLAC.appendChild(imgLAIM);
+  divLAC.appendChild(parrafo);
+
+  enlace.appendChild(divLAC);
+  divLA.appendChild(enlace);
+  contenedor.appendChild(divLA);
+
+    // Agregar estilos para el hover directamente en JavaScript
+    divLA.addEventListener("mouseenter", function() {
+      this.style.backgroundColor = "#4c5c64";
+      this.style.transform = "translateY(-10px)";
+    });
+  
+    divLA.addEventListener("mouseleave", function() {
+      this.style.backgroundColor = color; // Establecer el color de fondo original
+      this.style.transform = "none"; // Eliminar la transformación translateY
+    });
+}

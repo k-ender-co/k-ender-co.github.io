@@ -1,0 +1,139 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2f2f2f;
+  }
+  .bo {
+    color: red;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  header {
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin-right: 40px;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+
+  #WikiIndex {
+    background-color: rgb(66, 66, 66); /* Establece la posición fija */
+    top: 0; /* Coloca el div en la parte superior de la pantalla */
+    right: 0; /* Lo coloca en el lado derecho de la pantalla */
+    margin-right: 0px; /* Añade un margen derecho opcional para separarlo del borde de la pantalla */
+    width: 10%;
+    height: auto;
+    margin-top: 0px;
+    color: white;
+    margin-left: 90%;
+    display: block;
+    padding: 0px;
+  }
+
+  #Markdown {
+    color: white;
+    background-color: rgb(66, 66, 66);
+    margin-top: 41px;
+    margin-left: 0px;
+    width: 74%;
+    height: 100%;
+    padding: 0px;
+  }
+  #Markdown * {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 0px;
+    width: 74%;
+  }
+
+  .nav-list a:hover {
+    color: #ffd700;
+  }
+  @media (max-width: 768px) {
+    .navbar {
+        align-items: flex-start;
+    }
+  
+    .nav-list {
+        margin-top: 10px;
+    }
+  
+    .nav-list li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    #WikiIndex {
+      background-color: rgb(66, 66, 66);
+      margin-top: 61px;
+      width: 25%;
+      margin-right: 0px;
+      margin-left:  75%;
+      height: auto;
+      color: white;
+    }
+    #Markdown {
+      color: white;
+      background-color: #2f2f2f;
+      margin-top: 61px;
+      margin-left: 0px;
+      width: 75%;
+      height: auto;
+    }
+  }
