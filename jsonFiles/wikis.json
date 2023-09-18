@@ -38,7 +38,15 @@
                                 "Markdown":"wikis/Fundamentos/Funciones/Makedown"
                                 
                         }
-                }
+
+                },
+                "uso del sistema":{
+                   "Title":"uso del sistema",
+                   "quevamosavee":{
+                      "Title":"que vamos a ver",
+                      "Markdown":"wikis/UsoDelSistema"
+                   ""}
+}
 
         }
 }
